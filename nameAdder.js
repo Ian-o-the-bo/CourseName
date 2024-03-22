@@ -24,7 +24,7 @@
     GM_registerMenuCommand("export", function (e) {
         prompt("Copy this", JSON.stringify((Object.entries(localStorage)).filter((e) => {
             debugger;
-            var t = (e[0].toString());
+            let t = (e[0].toString());
             if (t.includes('classKey')) {
                 return t
             }
@@ -40,6 +40,5 @@
         let conf = prompt("Put template string below. {original} will be replaced with the original title of the page, and {classname} will be replaced with the saved coursename", localStorage["templateStr"] || "{original} for {classname}")
         localStorage["templateStr"] = conf;
     }, "c");
-    ;
     // Your code here...
 })();
